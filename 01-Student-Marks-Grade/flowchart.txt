@@ -1,0 +1,31 @@
+Flowchart outline (draw using standard flowchart symbols):
+
+[Start]
+   |
+[Input number of subjects]
+   |
+{Number of subjects > 0?} --No--> [Display error] --> [End]
+   |
+  Yes
+   |
+[Set total = 0; valid = True]
+   |
+[Input marks for each subject]
+   |
+{Marks between 0 and 100?} --No--> [Display invalid marks; valid = False]
+   | Yes
+[Add marks to total]
+   |
+[More subjects?] --Yes--> return to [Input marks]
+   | No
+{valid = True?} --No--> [End]
+   |
+  Yes
+   |
+[Calculate average]
+   |
+[Choose grade using conditions]
+   |
+[Display total, average, grade]
+   |
+[End]
