@@ -1,0 +1,33 @@
+BEGIN
+    INPUT number_of_subjects
+
+    IF number_of_subjects <= 0 THEN
+        PRINT "Number of subjects must be positive"
+    ELSE
+        total = 0
+        valid = TRUE
+
+        FOR each subject from 1 to number_of_subjects
+            INPUT marks
+            IF marks < 0 OR marks > 100 THEN
+                PRINT "Invalid marks"
+                valid = FALSE
+                BREAK
+            ELSE
+                total = total + marks
+            END IF
+        END FOR
+
+        IF valid = TRUE THEN
+            average = total / number_of_subjects
+            IF average >= 90 THEN grade = "A"
+            ELSE IF average >= 80 THEN grade = "B"
+            ELSE IF average >= 70 THEN grade = "C"
+            ELSE IF average >= 60 THEN grade = "D"
+            ELSE IF average >= 40 THEN grade = "E"
+            ELSE grade = "F"
+            END IF
+            PRINT total, average, grade
+        END IF
+    END IF
+END
