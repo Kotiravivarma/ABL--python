@@ -1,0 +1,13 @@
+Algorithm: Student Marks and Grade Calculator
+
+1. Start.
+2. Input number_of_subjects.
+3. If number_of_subjects <= 0, display an error.
+4. Otherwise set total = 0 and valid = True.
+5. For each subject, input marks.
+6. If marks are outside 0 to 100, display an error, set valid = False, and stop the loop.
+7. Otherwise add marks to total.
+8. If valid, calculate average = total / number_of_subjects.
+9. Assign a grade using if-elif-else.
+10. Display total, average, and grade.
+11. Stop.
